@@ -1,1 +1,6 @@
-<app-prova></app-prova>
+<!-- Event Binding: andiamo a prendere quello che è il comportamneto dell'utente e andiamo a interagire con esso  -->
+<!-- <button mat-raised-button color="primary" (click)="onClick()">Primary</button> -->
+  <mat-form-field class="example-full-width">
+    <mat-label>Favorite food</mat-label>
+    <input matInput placeholder="Ex. Pizza" (input)="onInput($event)" />
+  </mat-form-field>
