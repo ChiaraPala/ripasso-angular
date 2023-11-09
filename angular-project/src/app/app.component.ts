@@ -11,4 +11,8 @@ export class AppComponent {
   onInput(event: Event){
     console.log((<HTMLInputElement>event.target).value)
   }
+
+  onClick(event: Event){
+    this.title = "ho cliccato sul bottone"
+  }
 }
