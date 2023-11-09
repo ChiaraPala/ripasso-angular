@@ -5,33 +5,21 @@ import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit,
   templateUrl: './prova.component.html',
   styleUrls: ['./prova.component.css']
 })
-export class ProvaComponent implements OnInit, AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit, DoCheck, OnDestroy {
+export class ProvaComponent implements OnInit {
+
+  nome= 'Roger'
+
+  isDisabled = false
 
   constructor(){ 
     console.log("costruttore")
   }
   ngOnInit(): void {
     console.log("ngOnInit ")
+    setInterval(() =>{
+     this.isDisabled = !this.isDisabled
+    }, 2000)
     
-  }
-  ngAfterViewInit(): void {
-    console.log("ngAfterViewInit")
-  }
-  ngAfterContentChecked(): void {
-    console.log("ngAfterContentChecked")
-  };
-
-  ngAfterContentInit(): void {
-    console.log("ngAfterContentInit")
-  }
-  ngAfterViewChecked(): void {
-    console.log("ngAfterViewChecked")
-  }
-  ngDoCheck(): void {
-    console.log("ngDoCheck")
-  }
-  ngOnDestroy(): void {
-    console.log("ngOnDestroy")
   }
 
 // Constructor: This is the class constructor. It's called when the component is instantiated.
