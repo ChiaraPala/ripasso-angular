@@ -13,6 +13,9 @@ export class AppComponent {
     {nome: "anna", cognome:"verdi", isOnline: false},
     {nome: "marco", cognome:"bianchi",  isOnline: false},
   ]
+
+  numero = 3;
+
   
   onInput(event: Event){
     console.log((<HTMLInputElement>event.target).value)

@@ -11,8 +11,11 @@
     </li>
   </ul>
  -->
-  <div *ngFor="let persona of persone; index as i"> 
-    <p class="cerchioVerde" *ngIf="persona.isOnline"></p>
-    <p class="cerchioRosso" *ngIf="!persona.isOnline"></p>
-    <p>{{i}} {{persona.nome}} {{persona.cognome}}</p>
+ <!-- *ngSwitch -->
+  <div [ngSwitch]="numero">
+    <p *ngSwitchCase="1">uno</p>
+    <p *ngSwitchCase="2">due</p>
+    <p *ngSwitchCase="3">tre</p>
+    <p *ngSwitchCase="4">quattro</p>
+    <p *ngSwitchDefault>Default</p>
   </div>
