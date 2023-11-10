@@ -1,14 +1,18 @@
-
+<!-- 
   <mat-form-field class="example-full-width" appearance="fill">
     <mat-label>Usurname</mat-label>
     <input matInput (input)="onInput($event)"/>
-  </mat-form-field>
+  </mat-form-field> -->
 
-  <!-- *ngIf / ng-template -->
-  <ng-template *ngIf="isVisible; then bloccoIf else bloccoElse"></ng-template>
-  <ng-template #bloccoIf>
-    <p>Sono visibile</p>
-  </ng-template>
-  <ng-template #bloccoElse>
-  <p >non sono visibile</p>
-</ng-template>
+<!-- *ngFor
+  <ul>
+    <li *ngFor="let persona of persone">
+      {{persona.nome}} - {{persona.cognome}}
+    </li>
+  </ul>
+ -->
+  <div *ngFor="let persona of persone; index as i"> 
+    <p class="cerchioVerde" *ngIf="persona.isOnline"></p>
+    <p class="cerchioRosso" *ngIf="!persona.isOnline"></p>
+    <p>{{i}} {{persona.nome}} {{persona.cognome}}</p>
+  </div>
