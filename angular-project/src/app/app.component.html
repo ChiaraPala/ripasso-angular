@@ -4,10 +4,10 @@
     <input matInput (input)="onInput($event)"/>
   </mat-form-field> -->
 
-<!--ngStyle -->
+<!--ngClass -->
   <ul>
     <li *ngFor="let persona of persone">
-      <div class="cerchio" [ngStyle]="{'background': persona.color}"></div>
+      <div class="cerchio"  [ngClass]="{'cerchioOnline': persona.isOnline, 'cerchioOffline' : !persona.isOnline}"></div>
       <p>{{persona.nome}} {{persona.cognome}}</p>
     </li>
   </ul>
