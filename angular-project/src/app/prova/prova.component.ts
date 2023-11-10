@@ -1,21 +1,20 @@
-import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit, Component, DoCheck, Input, OnChanges, OnDestroy, OnInit, SimpleChanges } from '@angular/core';
+import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit, Component, DoCheck, EventEmitter, Input, OnChanges, OnDestroy, OnInit, Output, SimpleChanges } from '@angular/core';
 
 @Component({
   selector: 'app-prova',
   templateUrl: './prova.component.html',
   styleUrls: ['./prova.component.css']
 })
-export class ProvaComponent implements OnInit, OnChanges{
-  @Input() data: any;
+export class ProvaComponent implements OnInit{
+  @Output() mandaDatiEvento = new EventEmitter<string>()
 
-  constructor(){ 
-    console.log("costruttore")
-  }
+  nome = 'Luca'
+  constructor(){}
   
   ngOnInit(): void {
-    console.log(this.data)
   }
-  ngOnChanges(changes: SimpleChanges): void {
-    console.log(changes);
+
+  mandaDati(){
+    this.mandaDatiEvento.emit(this.nome) 
   }
 }

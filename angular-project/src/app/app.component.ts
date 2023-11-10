@@ -12,12 +12,8 @@ export class AppComponent {
     {nome: "anna", cognome:"verdi", isOnline: false,color: "pink"},
     {nome: "marco", cognome:"bianchi",isOnline: true, color: "yellow"},
   ]
-  onClick(){
-   
-  this.persone = [
-    {nome: "giulio", cognome:"rossi", isOnline: true, color: "green"},
-    {nome: "lucia", cognome:"verdi", isOnline: false,color: "pink"},
-    {nome: "fabio", cognome:"bianchi",isOnline: true, color: "yellow"},
-  ]
-  }
+onRiceviDati(value: string){
+  console.log(value)
+
+}
 }
