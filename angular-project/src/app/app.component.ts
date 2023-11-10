@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-project';
+  isVisible = true;
   
   onInput(event: Event){
     console.log((<HTMLInputElement>event.target).value)

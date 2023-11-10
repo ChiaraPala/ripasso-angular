@@ -1,8 +1,14 @@
-<!-- Two way binding -->
-<!-- con il two way binding facciamo in modo che ci sia un collegamento a doppio senso dalla logica alla view -->
-<button mat-raised-button color="primary" (click)="onClick($event)">Primary</button>
-  <mat-form-field class="example-full-width">
-    <mat-label>Favorite food</mat-label>
-    <input matInput placeholder="Ex. Pizza" [(ngModel)]="title" />
+
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Usurname</mat-label>
+    <input matInput (input)="onInput($event)"/>
   </mat-form-field>
-  <p>{{title}}</p>
+
+  <!-- *ngIf / ng-template -->
+  <ng-template *ngIf="isVisible; then bloccoIf else bloccoElse"></ng-template>
+  <ng-template #bloccoIf>
+    <p>Sono visibile</p>
+  </ng-template>
+  <ng-template #bloccoElse>
+  <p >non sono visibile</p>
+</ng-template>
