@@ -1,35 +1,21 @@
-import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit, Component, DoCheck, OnDestroy, OnInit } from '@angular/core';
+import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit, Component, DoCheck, Input, OnChanges, OnDestroy, OnInit, SimpleChanges } from '@angular/core';
 
 @Component({
   selector: 'app-prova',
   templateUrl: './prova.component.html',
   styleUrls: ['./prova.component.css']
 })
-export class ProvaComponent implements OnInit {
-
-  nome= 'Roger'
-
-  isDisabled = false
+export class ProvaComponent implements OnInit, OnChanges{
+  @Input() data: any;
 
   constructor(){ 
     console.log("costruttore")
   }
+  
   ngOnInit(): void {
-    console.log("ngOnInit ")
-    setInterval(() =>{
-     this.isDisabled = !this.isDisabled
-    }, 2000)
-    
+    console.log(this.data)
   }
-
-// Constructor: This is the class constructor. It's called when the component is instantiated.
-// ngOnInit: This lifecycle hook is called after Angular has initialized all the data-bound properties of the component.
-// ngAfterViewInit: This hook is called after the component's view has been initialized. It is a good place to perform actions that require the view to be fully initialized.
-// ngAfterContentChecked: This hook is called after Angular checks the content of the component.
-// ngAfterContentInit: This hook is called after Angular initializes the content of the component.
-// ngAfterViewChecked: This hook is called after Angular checks the view of the component.
-// ngDoCheck: This hook is called during every change detection run, and it allows you to implement your own change detection algorithm.
-// ngOnDestroy: This hook is called just before Angular destroys the component. It's a good place to clean up resources such as subscriptions or event listeners.
-
-
+  ngOnChanges(changes: SimpleChanges): void {
+    console.log(changes);
+  }
 }

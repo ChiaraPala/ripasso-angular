@@ -6,22 +6,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'angular-project';
-  isVisible = true;
+
   persone = [
-    {nome: "luca", cognome:"rossi", isOnline: true},
-    {nome: "anna", cognome:"verdi", isOnline: false},
-    {nome: "marco", cognome:"bianchi",isOnline: true},
+    {nome: "luca", cognome:"rossi", isOnline: true, color: "red"},
+    {nome: "anna", cognome:"verdi", isOnline: false,color: "pink"},
+    {nome: "marco", cognome:"bianchi",isOnline: true, color: "yellow"},
   ]
-
-  numero = 3;
-
-  
-  onInput(event: Event){
-    console.log((<HTMLInputElement>event.target).value)
-  }
-
-  onClick(event: Event){
-    this.title = "ho cliccato sul bottone"
+  onClick(){
+   
+  this.persone = [
+    {nome: "giulio", cognome:"rossi", isOnline: true, color: "green"},
+    {nome: "lucia", cognome:"verdi", isOnline: false,color: "pink"},
+    {nome: "fabio", cognome:"bianchi",isOnline: true, color: "yellow"},
+  ]
   }
 }

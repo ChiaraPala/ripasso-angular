@@ -1,14 +1,2 @@
-<!-- 
-  <mat-form-field class="example-full-width" appearance="fill">
-    <mat-label>Usurname</mat-label>
-    <input matInput (input)="onInput($event)"/>
-  </mat-form-field> -->
-
-<!--ngClass -->
-  <ul>
-    <li *ngFor="let persona of persone">
-      <div class="cerchio"  [ngClass]="{'cerchioOnline': persona.isOnline, 'cerchioOffline' : !persona.isOnline}"></div>
-      <p>{{persona.nome}} {{persona.cognome}}</p>
-    </li>
-  </ul>
- 
+<app-prova [data]="persone"></app-prova>
+<button (click)="onClick()"> Cambia</button>
