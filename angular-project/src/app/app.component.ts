@@ -9,9 +9,9 @@ export class AppComponent {
   title = 'angular-project';
   isVisible = true;
   persone = [
-    {nome: "luca", cognome:"rossi", isOnline: true},
-    {nome: "anna", cognome:"verdi", isOnline: false},
-    {nome: "marco", cognome:"bianchi",  isOnline: false},
+    {nome: "luca", cognome:"rossi", color: "red"},
+    {nome: "anna", cognome:"verdi", color: "pink"},
+    {nome: "marco", cognome:"bianchi", color: "yellow"},
   ]
 
   numero = 3;

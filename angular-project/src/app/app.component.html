@@ -4,18 +4,11 @@
     <input matInput (input)="onInput($event)"/>
   </mat-form-field> -->
 
-<!-- *ngFor
+<!--ngStyle -->
   <ul>
     <li *ngFor="let persona of persone">
-      {{persona.nome}} - {{persona.cognome}}
+      <div class="cerchio" [ngStyle]="{'background': persona.color}"></div>
+      <p>{{persona.nome}} {{persona.cognome}}</p>
     </li>
   </ul>
- -->
- <!-- *ngSwitch -->
-  <div [ngSwitch]="numero">
-    <p *ngSwitchCase="1">uno</p>
-    <p *ngSwitchCase="2">due</p>
-    <p *ngSwitchCase="3">tre</p>
-    <p *ngSwitchCase="4">quattro</p>
-    <p *ngSwitchDefault>Default</p>
-  </div>
+ 
