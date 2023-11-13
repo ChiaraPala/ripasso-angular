@@ -20,7 +20,7 @@ export class ContattiComponent implements OnInit {
     // this.isProfile = !this.route.snapshot.paramMap.get('id') ? false : true
     if(this.route.snapshot.paramMap.get('id')){
       this.isProfile = true
-      this.persona= this.servizioProva.getPersona(parseInt(this.route.snapshot.paramMap.get('ID')!))
+      this.persona= this.servizioProva.getPersona(parseInt(this.route.snapshot.paramMap.get('id')!))
     }else{
       this.isProfile = false
       this.persone = this.servizioProva.getPersone()
