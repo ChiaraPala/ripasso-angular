@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  colore = ''
 
   persone = [
     {nome: "luca", cognome:"rossi", isOnline: true, color: "red"},
@@ -15,5 +16,9 @@ export class AppComponent {
 onRiceviDati(value: string){
   console.log(value)
 
+}
+
+cambiaColoreEvidenziatore(colore: string){
+ this.colore = colore 
 }
 }
