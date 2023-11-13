@@ -10,4 +10,12 @@ export class ServizioProvaService {
     {nome: "marco", cognome:"bianchi",isOnline: true, color: "yellow"},
   ]
   constructor() { }
+
+  getPersone(){
+    return this.persone
+  }
+
+  getPersona(index: number){
+    return this.persone[index]
+  }
 }

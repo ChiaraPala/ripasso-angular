@@ -13,8 +13,7 @@ import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
 import {MatInputModule} from '@angular/material/input';
 import { HighlightDirective } from './direttive/highlight.directive';
-import { AboutComponent } from './components/about/about.component';
-import { ContactComponent } from './components/contact/contact.component';
+import { ContattiComponent } from './components/contatti/contatti.component';
 import { HomeComponent } from './components/home/home.component';
 
 
@@ -23,8 +22,7 @@ import { HomeComponent } from './components/home/home.component';
     AppComponent,
     ProvaComponent,
     HighlightDirective,
-    AboutComponent,
-    ContactComponent,
+    ContattiComponent,
     HomeComponent
   ],
   imports: [
