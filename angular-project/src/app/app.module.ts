@@ -16,6 +16,7 @@ import { HighlightDirective } from './direttive/highlight.directive';
 import { ContattiComponent } from './components/contatti/contatti.component';
 import { HomeComponent } from './components/home/home.component';
 import { ContattoComponent } from './components/contatto/contatto.component';
+import { NotfoundComponent } from './components/notfound/notfound.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { ContattoComponent } from './components/contatto/contatto.component';
     HighlightDirective,
     ContattiComponent,
     HomeComponent,
-    ContattoComponent
+    ContattoComponent,
+    NotfoundComponent
   ],
   imports: [
     BrowserModule,
