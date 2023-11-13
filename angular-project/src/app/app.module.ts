@@ -15,6 +15,7 @@ import {MatInputModule} from '@angular/material/input';
 import { HighlightDirective } from './direttive/highlight.directive';
 import { ContattiComponent } from './components/contatti/contatti.component';
 import { HomeComponent } from './components/home/home.component';
+import { ContattoComponent } from './components/contatto/contatto.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { HomeComponent } from './components/home/home.component';
     ProvaComponent,
     HighlightDirective,
     ContattiComponent,
-    HomeComponent
+    HomeComponent,
+    ContattoComponent
   ],
   imports: [
     BrowserModule,
