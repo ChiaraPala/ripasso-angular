@@ -6,6 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  title = 'corso angular'
+  oggi = Date.now()
+  numero= 5
   colore = ''
 
   persone = [
