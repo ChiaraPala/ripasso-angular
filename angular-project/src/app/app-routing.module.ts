@@ -4,16 +4,17 @@ import { ContattiComponent } from './components/contatti/contatti.component';
 import { HomeComponent } from './components/home/home.component';
 import { ContattoComponent } from './components/contatto/contatto.component';
 import { NotfoundComponent } from './components/notfound/notfound.component';
+import { AuthGuard, CanActivateChild } from './auth/auth.guard';
 
 const routes: Routes = [
-  {path: ' ', pathMatch: 'full', redirectTo: '/homepage' },
-  {path: ' homepage ', component:  HomeComponent },
-  {path: 'contatti', component: ContattiComponent, children: [
+  {path: '', pathMatch: 'full', redirectTo: '/homepage'},
+  {path: 'homepage', component:  HomeComponent },
+  {path: 'contatti', component: ContattiComponent, canActivate: [AuthGuard], canActivateChild: [CanActivateChild], children: [
     {path: ':id', component: ContattoComponent}
   ]},
    {path: '404', component: NotfoundComponent },
    {path: '**', redirectTo: '/400'}
-];
+]; 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
