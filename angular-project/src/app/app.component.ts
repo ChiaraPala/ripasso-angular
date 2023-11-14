@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ServizioProvaService } from './services/servizio-prova.service';
+import { Observable, interval } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -13,6 +14,16 @@ constructor( private servizioProva: ServizioProvaService){
 
 }
   ngOnInit(): void {
-  console.log('appcomponent' , this.servizioProva.persone)
+
+  //creare un osservable 
+  // new Observable((observer)=>{
+  //   let count = 0
+  //   setInterval(() =>{
+  //     observer.next(count)
+  //     count++;
+  //   }, 1000);
+  // }).subscribe((numero)=> {
+  //   console.log(numero);
+  // });
   }
 }
