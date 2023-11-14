@@ -1,5 +1,5 @@
 import { Component, OnDestroy, OnInit, ViewChild } from '@angular/core';
-import { NgForm } from '@angular/forms';
+import { FormControl, FormGroup, NgForm, Validators } from '@angular/forms';
 import { interval } from 'rxjs';
 
 @Component({
@@ -8,20 +8,21 @@ import { interval } from 'rxjs';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit{
-  
-  //per acceder al form lato tipescript
-  @ViewChild('homeform') homeform: NgForm 
+
+ homeform: FormGroup 
 
   constructor(){}
  
   ngOnInit(): void {
+    this.homeform = new FormGroup({
+      nome: new FormControl(null, Validators.required),
+      email: new FormControl(null, [Validators.required, Validators.email]),
+      colore: new FormControl()
+    })
   }
  
-  onSubmit(form: NgForm){
-  console.log(form)
-
-  //per accedere al form dal ts
-  //console.log(this.homeform)
+  onSubmit(){
+    console.log(this.homeform)
   }
 
 }
