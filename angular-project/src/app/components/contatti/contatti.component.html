@@ -4,6 +4,7 @@
  <div *ngFor="let persona of persone; index as i">
    <a routerLink="/contatti/{{i}}">
     <p>{{persona.nome}} {{persona.cognome}}</p></a> 
+    <!-- <button mat-raised-button color="primary" (click)="onDeletePersona()">Elimina utente</button> -->
   </div>
  </div>
 </div>

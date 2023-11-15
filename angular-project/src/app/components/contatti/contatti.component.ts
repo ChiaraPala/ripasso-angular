@@ -27,5 +27,10 @@ export class ContattiComponent implements OnInit {
   })
    
   }
-  
+  // onDeletePersona(){
+  //   this.firebase.deletePersona('https://angular-project-a0724-default-rtdb.europe-west1.firebasedatabase.app/persone', '-NjI2XCyN4P_kn0Su3tN')
+  //   .subscribe(data =>{
+  //     console.log(data)
+  //   })
+  // }
 }   

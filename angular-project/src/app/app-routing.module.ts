@@ -10,7 +10,7 @@ const routes: Routes = [
   {path: '', pathMatch: 'full', redirectTo: '/homepage'},
   {path: 'homepage', component:  HomeComponent },
   {path: 'contatti', component: ContattiComponent, canActivate: [AuthGuard], canActivateChild: [CanActivateChild], children: [
-    {path: ':id', component: ContattoComponent}
+   {path: ':id', component: ContattoComponent}
   ]},
    {path: '404', component: NotfoundComponent },
    {path: '**', redirectTo: '/400'}

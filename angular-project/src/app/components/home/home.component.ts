@@ -40,4 +40,14 @@ export class HomeComponent implements OnInit{
       console.log(data)
     })
   }
+
+  onPatchPersona(){ 
+    this.firebase.patchPersona(
+      'https://angular-project-a0724-default-rtdb.europe-west1.firebasedatabase.app/persone',
+      '-NjHc9JSR4NWVyJoUDPj',
+      {email: 'marconeri@gmail.it'})
+      .subscribe(data =>{
+        console.log(data)
+      })
+}
 }
