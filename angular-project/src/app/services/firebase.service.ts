@@ -11,4 +11,8 @@ export class FirebaseService {
   insertPersona( url: string, body: {}){
      return this.http.post(url , body)
   }
+  
+  getPersona(url: string){
+    return this.http.get(url)
+  }
 }

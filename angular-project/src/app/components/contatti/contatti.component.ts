@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { FirebaseService } from 'src/app/services/firebase.service';
 import { ServizioProvaService } from 'src/app/services/servizio-prova.service';
 
 @Component({
@@ -11,10 +12,15 @@ export class ContattiComponent implements OnInit {
 
   persone: any 
 
-  constructor(private servizioProva: ServizioProvaService) { }
+  constructor(private firebase: FirebaseService) { }
 
   ngOnInit(): void {
- this.persone  = this.servizioProva.getPersone()
+//this.persone  = this.servizioProva.getPersone()
+  this.firebase.getPersona('https://angular-project-a0724-default-rtdb.europe-west1.firebasedatabase.app/persone.json')
+  .subscribe((data: any )=> {
+    this.persone = Object.keys(data).map((key) => {return data[key]})
+    console.log(this.persone)
+  })
    
   }
-} 
+}   
