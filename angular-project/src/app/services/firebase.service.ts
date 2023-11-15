@@ -11,8 +11,13 @@ export class FirebaseService {
   insertPersona( url: string, body: {}){
      return this.http.post(url , body)
   }
-  
+
   getPersona(url: string){
     return this.http.get(url)
+  }
+
+  deletePersona(url: string, id: string){
+    console.log(`${url}/${id}.json`)
+    return this.http.delete(`${url}/${id}.json`)
   }
 }

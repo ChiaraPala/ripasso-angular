@@ -18,9 +18,14 @@ export class ContattiComponent implements OnInit {
 //this.persone  = this.servizioProva.getPersone()
   this.firebase.getPersona('https://angular-project-a0724-default-rtdb.europe-west1.firebasedatabase.app/persone.json')
   .subscribe((data: any )=> {
-    this.persone = Object.keys(data).map((key) => {return data[key]})
+    // console.log(data)
+    // console.log(Object.keys(data))
+    this.persone = Object.keys(data).map((key) => {
+      data[key]['id'] = key
+      return data[key]})
     console.log(this.persone)
   })
    
   }
+  
 }   
