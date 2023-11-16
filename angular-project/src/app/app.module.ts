@@ -22,6 +22,7 @@ import { HomeComponent } from './components/home/home.component';
 import { ContattoComponent } from './components/contatto/contatto.component';
 import { NotfoundComponent } from './components/notfound/notfound.component';
 import { SignupComponent } from './components/signup/signup.component';
+import { SigninComponent } from './components/signin/signin.component';
 
 
 @NgModule({
@@ -33,7 +34,8 @@ import { SignupComponent } from './components/signup/signup.component';
     HomeComponent,
     ContattoComponent,
     NotfoundComponent,
-    SignupComponent
+    SignupComponent,
+    SigninComponent
   ],
   imports: [
     BrowserModule,
